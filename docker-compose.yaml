@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  harald:
+    image: backend-image  # Updated to use the backend-image
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/lendmove?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+
+  mysqldb:
+    container_name: lendmovebackend
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: lendmove
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  frontend:
+    image: lendmovefrontend
+    container_name: lendmovefrontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - harald
+volumes:
+  mysql-data:
+
+
