@@ -3,7 +3,8 @@ version: '3.8'
 services:
   harald:
     image: backend-image  # Updated to use the backend-image
-    build: .
+    build: 
+      context: ./backend
     restart: always
     ports:
       - "8080:8080"
@@ -24,6 +25,8 @@ services:
     ports:
       - "3306:3306"
   frontend:
+    build:
+      context: ./frontend
     image: lendmovefrontend
     container_name: lendmovefrontend
     ports:
@@ -32,5 +35,3 @@ services:
       - harald
 volumes:
   mysql-data:
-
-
