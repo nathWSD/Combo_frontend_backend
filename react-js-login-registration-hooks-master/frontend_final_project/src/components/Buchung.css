@@ -1,0 +1,10 @@
+.Buchung {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 1;
+  margin: 10px;
+  background-color: lightgray;
+}

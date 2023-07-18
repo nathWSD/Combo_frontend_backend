@@ -1,0 +1,18 @@
+.BoardUser {
+    display: flex;
+  }
+  
+  .rows {
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0); 
+    margin: 10px; /* Adjust as needed */
+  }
+  
+  .profilbild{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .autobild{
+    border-radius: 10px;
+  }

@@ -1,0 +1,39 @@
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 9999;
+}
+
+.menu-wrapper.visible {
+  left: 0;
+}
+
+.menu-content {
+  padding: 20px;
+  color: white;
+}
+
+.info {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.info.visible {
+  right: 0;
+}
+
+.info h3,
+.menu-content h3 {
+  margin-top: 0;
+}

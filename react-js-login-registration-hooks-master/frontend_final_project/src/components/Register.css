@@ -1,0 +1,37 @@
+
+.register-wrapper{
+    padding: 0 200px;
+}
+.register-container {
+    background-color: rgba(0, 0, 0, 0.762); /* Adjust the alpha value as needed */
+    margin-top: 30px;
+    padding: 20px 40px;
+  }
+  .form-control {
+    background-color: gray; /* Replace #333 with your desired darker color */
+    /* Add any additional styles as needed */
+  }
+  label {
+    color: rgb(121, 200, 184); /* Replace #f00 with your desired bright color */
+    /* Add any additional styles as needed */
+  }
+
+ /*  .placeholder-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #aaa;
+    pointer-events: none;
+    font-size: 14px;
+  } */
+
+  .registration-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width:1000px) {
+    .register-wrapper{
+      padding: 0;
+    }
+  }
